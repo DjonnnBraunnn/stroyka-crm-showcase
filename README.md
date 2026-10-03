@@ -4,7 +4,7 @@
 
 **One system for a construction company: sites, tasks with photo reports, rotation crews and the worker camp, heavy equipment and fuel, budget vs. actual, document approval and eight director reports** — built end-to-end by [Johannes Braun](https://github.com/DjonnnBraunnn).
 
-This is a **showcase repository** with selected modules from the private codebase. The system is built for a construction company in Kazakhstan around the director's own structure of the business: construction works, worker camp & warehouse, quarrying, road maintenance and the head office.
+This is a **showcase repository** with selected modules from the private codebase. The system is built for a construction company and follows the structure the management defined for its own business.
 
 ---
 
@@ -16,7 +16,7 @@ This is a **showcase repository** with selected modules from the private codebas
 
 ![Mobile app](assets/mobile-app.png)
 
-*Installable PWA: a foreman takes photos on site — time and GPS position are attached automatically. UI in Russian — built for a client in Kazakhstan. Demo data is fictional.*
+*Installable PWA: a foreman takes photos on site — time and GPS position are attached automatically. UI in Russian. Demo data is fictional.*
 
 ![Roles](assets/roles.png)
 

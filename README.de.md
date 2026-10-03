@@ -4,7 +4,7 @@
 
 **Ein System für ein Bauunternehmen: Baustellen, Aufgaben mit Fotobericht, Schichtpersonal und Arbeiterwohnlager, Baumaschinen und Kraftstoff, Soll/Ist-Budget, Dokumentenfreigabe und acht Berichte für die Geschäftsführung** — vollständig entwickelt von [Johannes Braun](https://github.com/DjonnnBraunnn).
 
-Dies ist ein **Showcase-Repository** mit ausgewählten Modulen aus der privaten Codebasis. Das System entsteht für ein Bauunternehmen in Kasachstan und folgt der Struktur, die der Geschäftsführer selbst vorgegeben hat: Bauarbeiten, Wohnlager & Lager, Rohstoffabbau, Straßenunterhalt und Zentrale.
+Dies ist ein **Showcase-Repository** mit ausgewählten Modulen aus der privaten Codebasis. Das System entsteht für ein Bauunternehmen und folgt der Struktur, die die Geschäftsführung für ihren Betrieb vorgegeben hat.
 
 ---
 
@@ -16,7 +16,7 @@ Dies ist ein **Showcase-Repository** mit ausgewählten Modulen aus der privaten 
 
 ![Mobile App](assets/mobile-app.png)
 
-*Installierbare PWA: Der Polier fotografiert auf der Baustelle — Zeit und GPS-Position werden automatisch angehängt. Oberfläche auf Russisch, für einen Kunden in Kasachstan. Demo-Daten sind fiktiv.*
+*Installierbare PWA: Der Polier fotografiert auf der Baustelle — Zeit und GPS-Position werden automatisch angehängt. Oberfläche auf Russisch. Demo-Daten sind fiktiv.*
 
 ![Rollen](assets/roles.png)
 
