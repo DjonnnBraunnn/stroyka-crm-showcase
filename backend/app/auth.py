@@ -2,14 +2,35 @@ import os
 from datetime import datetime, timedelta, timezone
 from fastapi import Depends, HTTPException
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from jose import JWTError, jwt
+# PyJWT instead of python-jose: jose 3.3.0 has an algorithm-confusion CVE
+# (CVE-2024-33663) and depends on ecdsa, which has an unfixed advisory.
+import jwt
+from jwt import PyJWTError as JWTError
 from passlib.context import CryptContext
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from .database import get_db
 from .models import User
 
-SECRET_KEY = os.environ.get("SECRET_KEY", "stroyka-dev-secret")
+# The signing key comes only from the environment. There is deliberately no
+# fallback: a default key in source code means anyone who read the code could
+# forge a login. Missing, example or short keys stop the server at start-up.
+_KNOWN_PUBLIC_KEYS = {"stroyka-dev-secret"}
+_MIN_KEY_LEN = 32
+
+
+def _load_secret_key() -> str:
+    key = os.environ.get("SECRET_KEY", "")
+    if not key:
+        raise RuntimeError("SECRET_KEY is not set (generate one: openssl rand -base64 48)")
+    if key in _KNOWN_PUBLIC_KEYS:
+        raise RuntimeError("SECRET_KEY is a published example value; generate your own")
+    if len(key) < _MIN_KEY_LEN:
+        raise RuntimeError(f"SECRET_KEY must be at least {_MIN_KEY_LEN} characters")
+    return key
+
+
+SECRET_KEY = _load_secret_key()
 ALGORITHM = "HS256"
 EXPIRE_DAYS = 30
 

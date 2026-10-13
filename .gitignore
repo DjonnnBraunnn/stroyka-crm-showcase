@@ -7,3 +7,16 @@ __pycache__/
 frontend/node_modules
 frontend/.next
 backups/
+
+# Secrets and data never belong in git
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.sql.gz
